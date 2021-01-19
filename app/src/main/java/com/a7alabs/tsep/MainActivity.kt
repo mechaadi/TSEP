@@ -2,9 +2,11 @@ package com.a7alabs.tsep
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.a7alabs.tsep.databinding.ActivityMainBinding
 import com.a7alabs.tsep.fragments.Home
 import com.a7alabs.tsep.fragments.NewPost
 import com.a7alabs.tsep.fragments.Profile
@@ -13,6 +15,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var binding: ActivityMainBinding
+
+
     private fun openFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container, fragment)
@@ -20,7 +25,11 @@ class MainActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
+
+    private val a = { i: Int, s: String -> i.toString() + s }
+
+
+    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { menuItem : MenuItem ->
         when (menuItem.itemId) {
             R.id.feed -> {
                 val homeFragment = Home.newInstance()
@@ -43,15 +52,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        toolbar?.title = "Toolbar"
-        toolbar?.subtitle = "Subtitle"
-        toolbar?.navigationIcon = ContextCompat.
-        getDrawable(this,R.drawable.ic_launcher_background)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val bottomNavigation: BottomNavigationView = findViewById(R.id.navbar)
+        val toolbar = binding.toolbar
+        setSupportActionBar(toolbar)
+
+        println("-=================================================================================")
+        println(a(3, "Aditya"))
+
+        val bottomNavigation: BottomNavigationView = binding.navbar
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         val homeFragment = Home.newInstance()
