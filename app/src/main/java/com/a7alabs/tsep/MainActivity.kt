@@ -2,48 +2,14 @@ package com.a7alabs.tsep
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.a7alabs.tsep.fragments.Home
+import com.a7alabs.tsep.fragments.NewPost
+import com.a7alabs.tsep.fragments.Profile
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import java.lang.reflect.Array.newInstance
 
-
-class Home : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-        inflater.inflate(R.layout.home, container, false)
-
-
-    companion object {
-        fun newInstance(): Home = Home()
-    }
-
-}
-
-
-class NewPost : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-        inflater.inflate(R.layout.newpost, container, false)
-
-
-    companion object {
-        fun newInstance(): NewPost = NewPost()
-    }
-}
-
-
-class Profile : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-        inflater.inflate(R.layout.profile, container, false)
-
-
-    companion object {
-        fun newInstance(): Profile = Profile()
-    }
-}
 
 class MainActivity : AppCompatActivity() {
 

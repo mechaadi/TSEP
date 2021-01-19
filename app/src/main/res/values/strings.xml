@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">tsep</string>
+    <string name="new_post">New Post</string>
+    <string name="feed">Feed</string>
+    <string name="profile">Profile</string>
 </resources>

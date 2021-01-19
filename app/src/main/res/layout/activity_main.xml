@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#222121"
+    android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity">
 
 
@@ -16,6 +16,7 @@
         android:foregroundGravity="center_horizontal"
         android:gravity="center_horizontal"
         android:textAlignment="center"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -40,8 +41,6 @@
     </androidx.appcompat.widget.Toolbar>
 
 
-
-
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -55,11 +54,17 @@
 
     </FrameLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#737272"
+        app:layout_constraintBottom_toBottomOf="@+id/container"/>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#2196F3"
+        android:background="@color/colorPrimaryDark"
         app:itemIconSize="20dp"
         app:itemIconTint="@color/design_default_color_background"
         app:itemTextColor="#E1DEDE"
