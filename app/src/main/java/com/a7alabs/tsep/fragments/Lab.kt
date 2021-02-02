@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import com.a7alabs.tsep.databinding.LabBinding
 import com.a7alabs.tsep.experiments.Three
 import com.a7alabs.tsep.experiments.Two
-import kotlinx.android.synthetic.main.home.view.*
 import kotlinx.android.synthetic.main.lab.view.*
 
 
