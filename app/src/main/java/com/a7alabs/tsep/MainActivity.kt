@@ -10,6 +10,8 @@ import com.a7alabs.tsep.databinding.ActivityMainBinding
 import com.a7alabs.tsep.fragments.Home
 import com.a7alabs.tsep.fragments.NewPost
 import com.a7alabs.tsep.fragments.Profile
+import com.a7alabs.tsep.fragments.Lab
+
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -46,6 +48,11 @@ class MainActivity : AppCompatActivity() {
                 openFragment(profileFragment)
                 return@OnNavigationItemSelectedListener true
             }
+            R.id.experiment -> {
+                val profileFragment = Lab.newInstance()
+                openFragment(profileFragment)
+                return@OnNavigationItemSelectedListener true
+            }
         }
         false
     }
@@ -57,9 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         val toolbar = binding.toolbar
         setSupportActionBar(toolbar)
-
-        println("-=================================================================================")
-        println(a(3, "Aditya"))
+        
 
         val bottomNavigation: BottomNavigationView = binding.navbar
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

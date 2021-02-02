@@ -11,6 +11,11 @@
         android:title="@string/new_post"/>
 
     <item
+        android:id="@+id/experiment"
+        android:icon="@drawable/lab"
+        android:title="@string/lab"/>
+
+    <item
         android:id="@+id/profile"
         android:icon="@drawable/profile"
         android:title="@string/profile"/>
