@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+ >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Calculator"
+        android:textColor="#E1D8D8"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="#2E2E2E"
+            android:gravity="center_vertical|end"
+            android:padding="16dp"
+            android:text="33 + 10"
+            android:textColor="#E1D8D8"
+            android:textSize="30sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3.93"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#1E1E1E"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text=" "
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text=" "
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    app:srcCompat="@drawable/ic_clear" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    app:srcCompat="@drawable/ic_backspace" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#272727"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cal7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/cal8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="8"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/cal9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/caldivide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3C3C3C"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="/"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#1E1E1E"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cal4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/cal5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/cal6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="6"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/calmul"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3C3C3C"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="x"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#272727"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cal1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/cal2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/cal3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/calminus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3C3C3C"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#1E1E1E"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cal0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/caldot"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="."
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/calblank"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3F51B5"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="="
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/calplus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3C3C3C"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="#E1D8D8"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
